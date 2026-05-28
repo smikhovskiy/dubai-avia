@@ -1,0 +1,43 @@
+# CLAUDE.md
+
+## Проект
+
+**Dubai-Moscow Flight Finder** — приложение для поиска лучших авиабилетов Дубай ↔ Москва.
+Репо: https://github.com/smikhovskiy/dubai-avia
+
+## Структура (целевая)
+
+```
+dubai-avia/
+├── backend/
+│   ├── main.py          # FastAPI app
+│   ├── search.py        # Логика поиска рейсов
+│   ├── scoring.py       # Скоринг-движок
+│   └── enrichment.py    # Обогащение данными (задержки, комфорт)
+├── frontend/
+│   └── index.html       # UI
+├── PLAN.md
+└── CLAUDE.md
+```
+
+## Стек
+
+- Python 3.11+, FastAPI, httpx
+- HTML + vanilla JS (без фреймворков)
+
+## API-ключи
+
+Хранить в `.env` (файл не коммитить). Переменные:
+- `TEQUILA_API_KEY` — Aviasales Tequila (поиск рейсов)
+- `AVIATIONSTACK_API_KEY` — статистика задержек и отмен
+
+## Маршрут поиска
+
+Дубай (DXB) ↔ Москва (MOW = SVO + DME + VKO).
+
+## Правила работы
+
+- Каждый этап из PLAN.md — отдельная ветка и PR
+- Ветки называть: `feature/...`, `fix/...`
+- Коммиты на английском, коротко
+- `.env` никогда не коммитить
