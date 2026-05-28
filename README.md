@@ -16,6 +16,6 @@ Clone the repository and explore the project.
 git clone https://github.com/smikhovskiy/dubai-avia.git
 ```
 
-## Contribuing
+## Contributing
 
 Pull requests are welcome!
